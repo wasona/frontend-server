@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css"; // Import the CSS file
+import FormButton from "../formbutton/formbutton";
 
 const Navbar: React.FC = () => {
   return (
@@ -7,10 +8,29 @@ const Navbar: React.FC = () => {
       <div className="nav-section">
         <span className="logo">Wasona</span>
       </div>
-      <div className="nav-section">More stuff</div>
+      <div className="nav-section">
+        {/* <FormButton
+          className="dark-mode-toggle"
+          children={<>DARK MODE</>}
+        ></FormButton> */}
+        <FormButton className="sign-in" children={<>Sign In</>}></FormButton>
+      </div>
     </nav>
   );
 };
+// Ill wait for you to get it working and show what that looks like
+// but in general, keep in mind that the className, children etc etc will likely be
+// empty in most circumstances, for a clean entry point ykno?
+//
+// i suspect the final product would look something like
+// <FormButton href="/auth/signin">
+//   Sign in
+// </FormButton>
+// and all the style, etc will happen inside the component
+// but for now, just get it running and see what we need to adjust
+//
+
+// hmm yeah i can kind of see what you mean; sign-in would need to dynamically be populated with, say, 'account'
 
 export default Navbar;
 
