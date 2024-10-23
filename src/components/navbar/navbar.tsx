@@ -5,10 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <nav>
       <div className="nav-section">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Toki_pona.svg"
-          alt="Toki Pona"
-        />
+        <span className="logo">Wasona</span>
       </div>
       <div className="nav-section">More stuff</div>
     </nav>
