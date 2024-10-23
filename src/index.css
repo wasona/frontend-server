@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+:root {
+    --bg-color: #f0ebce;
+    --bg-color-grad: #d6c69f;
+    --fg-color: black;
+    --accent-color: #4e6c50;
+    --shade-color: #395144;
+    --header-bg-color: #f0ebce;
+    --font: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(var(--bg-color), var(--bg-color-grad));
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    font-family: var(--font);
+    margin: 0;
+}

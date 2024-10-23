@@ -6,7 +6,7 @@ const Layout: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div style={{ padding: "1rem" }}>
+      <div style={{ padding: "0rem" }}>
         <Outlet />
       </div>
     </>

@@ -1,42 +1,25 @@
+/* THIS IS HOW TO COMMENT STUFF ON CSS FILES */
+
 nav {
-    padding: 0.25rem;
-    background-color: #6ee6d8;
-    border-bottom: 1px solid #ddd;
-}
-
-ul {
-    list-style: none;
+    background-color: green;
+    height: 50px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    box-shadow: 10px 10px 5px blue;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-ul > div {
+.nav-section {
+    color: white;
     display: flex;
-    margin: 0;
+    align-items: center;
+    height: 100%; /* Take up all of the nav height, should be good? */
+    background-color: #880000;
 }
 
-ul > div > li {
-    margin-right: 0.75rem;
-    font-size: 0.9rem;
-}
-
-.active {
-    font-weight: bold;
-}
-
-nav a {
-    padding: 0.75rem; /* Ensure equal padding on all sides */
-    background-color: #007bff;
-    color: white !important;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-
-nav a.active {
-    font-weight: bold;
-    color: white !important;
+.nav-section img {
+    height: 100%;
+    width: auto;
 }
