@@ -42,7 +42,7 @@ nav {
 }
 
 .sign-in:hover {
-    background-color: darken(var(--shade-color), 10%);
+    background-color: var(--accent-color);
 }
 
 .sign-in-text {
