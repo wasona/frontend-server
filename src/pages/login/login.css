@@ -1,18 +1,18 @@
-.button-container {
+/* .button-container {
   display: flex;
-  width: 100%; /* Spans the entire width of the form */
+  width: 100%;
 }
 
 .button-half {
-  flex: 1; /* Makes sure each button takes up equal space */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
+  justify-content: center;
 }
 
 button,
 a.button-like {
-  width: 100%; /* Makes the button fill the container it is in */
-  max-width: 150px; /* Optional: limits button width to not exceed a maximum */
+  width: 100%;
+  max-width: 150px;
   padding: 10px 20px;
   margin: 5px;
   font-size: 16px;
@@ -36,6 +36,8 @@ a.button-like:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px; /* Example width for the form */
+  width: 400px;
   margin: 0 auto;
 }
+
+*/

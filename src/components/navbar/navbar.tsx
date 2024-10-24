@@ -13,7 +13,9 @@ const Navbar: React.FC = () => {
           className="dark-mode-toggle"
           children={<>DARK MODE</>}
         ></FormButton> */}
-        <FormButton className="sign-in" children={<>Sign In</>}></FormButton>
+        <FormButton className="sign-in">
+          <span className="sign-in-text">sign in</span>
+        </FormButton>
       </div>
     </nav>
   );
