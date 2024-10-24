@@ -39,11 +39,11 @@ nav {
     border-radius: 100px;
     border-width: 1px;
     padding: 10px 20px; /* Added padding to create nice margins around the text */
-    transition: background-color 0.33s ease;
+    transition: background-color 2s ease;
 }
 
 .sign-in:hover {
-    background-color: var(--accent-color);
+    background-color: red;
 }
 
 .sign-in-text {
