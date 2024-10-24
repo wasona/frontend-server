@@ -6,7 +6,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: var(--black-shadow-color);
+    box-shadow: 5px 5px 5px var(--black-shadow-color);
     padding: 20px;
 }
 
