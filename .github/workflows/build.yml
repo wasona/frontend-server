@@ -36,8 +36,7 @@ jobs:
           key: ${{ secrets.SSH_DEPLOY_KEY }}
           script: |
             source ~/.zshrc &&
-            cd ~/backend-server &&
+            cd ~/frontend-server &&
             git pull &&
-            yarn install &&
-            yarn run build &&
-            yarn run up
+            npm run build &&
+            npm run up
