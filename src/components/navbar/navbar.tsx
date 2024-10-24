@@ -2,8 +2,6 @@ import React from "react";
 import "./navbar.css"; // Import the CSS file
 import FormButton from "../formbutton/formbutton";
 
-
-
 const Navbar: React.FC = () => {
   return (
     <nav>
@@ -11,10 +9,12 @@ const Navbar: React.FC = () => {
         <span className="logo">Wasona</span>
       </div>
       <div className="nav-section">
-        {/* <FormButton
-          className="dark-mode-toggle"
-          children={<>DARK MODE</>}
-        ></FormButton> */}
+        {
+          <FormButton
+            className="dark-mode-toggle"
+            children={<></>}
+          ></FormButton>
+        }
         <FormButton className="sign-in">
           <span className="sign-in-text">sign in</span>
         </FormButton>
