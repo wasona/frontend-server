@@ -7,7 +7,8 @@
     "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "tsc -b && vite build && vite preview --host"
+    "preview": "tsc -b && vite build && vite preview --host",
+    "up": "sudo systemctl restart frontend-server.service"
   },
   "dependencies": {
     "axios": "^1.7.7",
