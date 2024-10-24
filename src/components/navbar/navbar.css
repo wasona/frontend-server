@@ -40,13 +40,13 @@ nav {
     border-width: 1px;
     padding: 10px 20px; /* Added padding to create nice margins around the text */
     transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+        background-color 0.166666s ease,
+        transform 0.166666s ease;
 }
 
 .sign-in:active {
     transform: scale(0.9) scale(1);
-    transition: transform 0.2s ease;
+    transition: transform 0.166666s ease;
 }
 
 .sign-in:hover {
@@ -65,13 +65,13 @@ nav {
     border-width: 2px;
     height: 45px;
     width: 45px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.166666s ease;
     padding: 5px 5px;
     margin-right: 20px;
-    transition: transform 0.2s ease;
+    transition: transform 0.166666s ease;
 }
 
 .dark-mode-toggle:active {
     transform: scale(0.9) scale(1);
-    transition: transform 0.2s ease;
+    transition: transform 0.166666s ease;
 }
