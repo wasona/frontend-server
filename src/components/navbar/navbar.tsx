@@ -12,7 +12,11 @@ const Navbar: React.FC = () => {
         {
           <FormButton
             className="dark-mode-toggle"
-            children={<></>}
+            children={
+              <>
+                <img src="/src/assets/dark_mode.svg" alt="Dark Mode Toggle" />
+              </>
+            }
           ></FormButton>
         }
         <FormButton className="sign-in">

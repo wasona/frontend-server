@@ -33,13 +33,17 @@ nav {
     font-size: 18px;
     font-weight: 600;
     background-color: var(--shade-color);
-    box-shadow: var(--black-shadow-color);
+    box-shadow: 2px 2px 2px var(--black-shadow-color);
     border-style: solid;
-    border-color: black;
+    border-color: var(--shade-color);
     border-radius: 100px;
     border-width: 1px;
     padding: 10px 20px; /* Added padding to create nice margins around the text */
     transition: background-color 0.5s ease;
+}
+
+.sign-in:active {
+    transform: scale(0.95);
 }
 
 .sign-in:hover {
@@ -51,14 +55,18 @@ nav {
 
 .dark-mode-toggle {
     color: var(--bg-color);
-    font-size: 18px;
-    font-weight: 600;
-    background-color: var(--shade-color);
-    box-shadow: var(--black-shadow-color);
+    background-color: transparent;
     border-style: solid;
-    border-color: black;
-    border-radius: 50%; /* Changed to make the element round */
-    border-width: 1px;
-    padding: 10px 20px; /* Added padding to create nice margins around the text */
+    border-color: var(--shade-color);
+    border-radius: 50%;
+    border-width: 2px;
+    height: 45px;
+    width: 45px;
     transition: background-color 0.5s ease;
+    padding: 5px 5px;
+    margin-right: 20px;
+}
+
+.dark-mode-toggle:active {
+    transform: scale(0.95);
 }
