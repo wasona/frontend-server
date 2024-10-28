@@ -7,3 +7,7 @@
 .Blurb {
     display: grid;
 }
+
+p {
+    text-align: center;
+}

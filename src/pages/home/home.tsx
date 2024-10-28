@@ -10,6 +10,10 @@ const Home: React.FC = () => {
     <div className="HomeScreen">
       <Navbar />
       <Blurb />
+      <p>
+        This site is free and open source (AGPL). The course is Creative Commons
+        (CC-BY-SA). Help us by contributing on Github!
+      </p>
       <div></div>
     </div>
   );
