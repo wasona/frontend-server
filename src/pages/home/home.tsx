@@ -9,7 +9,9 @@ const Home: React.FC = () => {
   return (
     <div className="HomeScreen">
       <Navbar />
-      <Blurb />
+      <div className="widthLimitWrapper">
+        <Blurb />
+      </div>
       <p>
         This site is free and open source (AGPL). The course is Creative Commons
         (CC-BY-SA). Help us by contributing on Github!

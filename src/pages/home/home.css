@@ -2,12 +2,16 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+    text-align: center;
 }
 
 .Blurb {
     display: grid;
+    max-width: 1000px;
 }
 
-p {
-    text-align: center;
+.widthLimitWrapper {
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
 }
