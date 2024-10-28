@@ -37,6 +37,7 @@ jobs:
           script: |
             source ~/.zshrc &&
             cd ~/frontend-server &&
+            git reset --hard &&
             git pull &&
             npm run build &&
             npm run up
