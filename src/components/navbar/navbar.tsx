@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.css"; // Import the CSS file
 import FormButton from "../formbutton/formbutton";
-import DarkModeSvg from "/src/assets/dark_mode.svg";
+import DarkModeSvg from "../../assets/dark_mode.svg";
 
 const Navbar: React.FC = () => {
   return (
