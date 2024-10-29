@@ -1,11 +1,12 @@
 import React from "react";
 import "./home-blurb.css"; // Import the CSS file
 import FormButton from "../formbutton/formbutton";
+import wasonaImage from "src/assets/wasona.svg"; // Import the SVG file
 
 const Blurb: React.FC = () => {
   return (
     <div className="blurb">
-      <img src="src/assets/wasona.svg" alt="Wasona bird!" />
+      <img src={wasonaImage} alt="Wasona bird!" />
       <div className="blurbTextBox">
         <h1>
           Wasona

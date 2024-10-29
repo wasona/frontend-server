@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css"; // Import the CSS file
 import FormButton from "../formbutton/formbutton";
+import DarkModeSvg from "/src/assets/dark_mode.svg";
 
 const Navbar: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar: React.FC = () => {
             className="dark-mode-toggle"
             children={
               <>
-                <img src="/src/assets/dark_mode.svg" alt="Dark Mode Toggle" />
+                <img src={DarkModeSvg} alt="Dark Mode Toggle" />
               </>
             }
           ></FormButton>
