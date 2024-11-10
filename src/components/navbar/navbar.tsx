@@ -24,13 +24,19 @@ const Navbar: React.FC = () => {
           ></FormButton>
         }
         {isLoggedIn ? (
-          <FormButton className="profile">
+          <button
+            className="profile"
+            onClick={() => (window.location.href = "/auth/profile")}
+          >
             <span className="profile-text">Profile</span>
-          </FormButton>
+          </button>
         ) : (
-          <FormButton className="sign-in">
+          <button
+            className="sign-in"
+            onClick={() => (window.location.href = "/auth/login")}
+          >
             <span className="sign-in-text">Sign In</span>
-          </FormButton>
+          </button>
         )}
       </div>
     </nav>
