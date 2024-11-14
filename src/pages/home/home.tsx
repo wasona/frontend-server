@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
-import Navbar from "../../components/navbar/navbar";
-import Blurb from "../../components/home-blurb/home-blurb";
+import Navbar from "@components/navbar/navbar";
+import Blurb from "@components/home-blurb/home-blurb";
 
 // suggestion: comment out instead of deleting, maybe we'll make use of some'
 

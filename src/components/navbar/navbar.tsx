@@ -1,8 +1,8 @@
 import React from "react";
 import "./navbar.css"; // Import the CSS file
-import FormButton from "../formbutton/formbutton";
-import DarkModeSvg from "../../assets/dark_mode.svg";
-import { useAuthStore } from "../../store/authStore";
+import FormButton from "@components/formbutton/formbutton";
+import DarkModeSvg from "@assets/dark_mode.svg";
+import { useAuthStore } from "@store/authStore";
 
 const Navbar: React.FC = () => {
   const { isLoggedIn } = useAuthStore();

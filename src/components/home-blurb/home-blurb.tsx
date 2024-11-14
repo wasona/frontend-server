@@ -1,7 +1,7 @@
 import React from "react";
 import "./home-blurb.css"; // Import the CSS file
-import FormButton from "../formbutton/formbutton";
-import wasonaImage from "../../assets/wasona.svg"; // Import the SVG file
+import FormButton from "@components/formbutton/formbutton";
+import wasonaImage from "@assets/wasona.svg"; // Import the SVG file
 
 const Blurb: React.FC = () => {
   return (
