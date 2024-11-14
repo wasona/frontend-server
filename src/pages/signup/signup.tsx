@@ -51,7 +51,9 @@ export const Signup = () => {
       alert("Signup successful!");
     } catch (error: unknown) {
       if (axios.isAxiosError(error) && error.response) {
-        alert(`Server error: ${error.response.data.message}`);
+        alert(
+          `Server error: ${error.response.data.codeName}\n\n${JSON.stringify(error.response.data.error)}`,
+        );
       } else if (error instanceof Error) {
         alert("Network error: " + error.message);
       } else {
@@ -157,7 +159,7 @@ const SignupForm = ({
         required
       >
         <option value="">Select your country</option>
-        <option value="US">United States</option>
+        <option value="USA">United States</option>
       </select>
     </div>
     <div className="form-group">

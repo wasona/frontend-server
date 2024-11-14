@@ -32,14 +32,16 @@ export const Login = () => {
 
       const response = await axios.post(
         `${backendUrl}:${backendPort}/auth/login`,
-        form,
+        { ...form, keepLoggedIn: true },
       );
 
       console.log("Login successful", response.data);
       alert("Login successful!");
     } catch (error: unknown) {
       if (axios.isAxiosError(error) && error.response) {
-        alert(`Server error: ${error.response.data.message}`);
+        alert(
+          `Server error: ${error.response.data.codeName}\n\n${JSON.stringify(error.response.data.error)}`,
+        );
       } else if (error instanceof Error) {
         alert("Network error: " + error.message);
       } else {
