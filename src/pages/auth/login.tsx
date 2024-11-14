@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./login.css";
 
 export const Login = () => {
   const [form, setForm] = useState({

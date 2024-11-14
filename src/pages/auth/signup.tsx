@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./signup.css";
-import FormButton from "@components/formbutton/formbutton"; // import the FormButton component
+import FormButton from "@components/formbutton"; // import the FormButton component
 
 export const Signup = () => {
   const [form, setForm] = useState({
