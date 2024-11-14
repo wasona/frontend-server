@@ -24,7 +24,9 @@ export const Login = () => {
       const backendPort = import.meta.env.VITE_BACKEND_PORT;
 
       if (!backendUrl || !backendPort) {
-        alert("Backend URL or port is missing. Please check your environment variables.");
+        alert(
+          "Backend URL or port is missing. Please check your environment variables.",
+        );
         return;
       }
 
@@ -69,37 +71,41 @@ const LoginForm = ({
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) => (
-<form className="login-form" onSubmit={handleSubmit}>
-  <h2>Login</h2>
-  <div className="form-group">
-    <label htmlFor="userEmail">Email</label>
-    <input
-      type="email"
-      id="userEmail"
-      name="userEmail"
-      value={form.userEmail}
-      onChange={handleChange}
-      required
-    />
-  </div>
-  <div className="form-group">
-    <label htmlFor="userPw">Password</label>
-    <input
-      type="password"
-      id="userPw"
-      name="userPw"
-      value={form.userPw}
-      onChange={handleChange}
-      required
-    />
-  </div>
-  <div className="button-container">
-    <div className="button-half">
-      <button type="submit" className="button-style">Login</button>
+  <form className="login-form" onSubmit={handleSubmit}>
+    <h2>Login</h2>
+    <div className="form-group">
+      <label htmlFor="userEmail">Email</label>
+      <input
+        type="email"
+        id="userEmail"
+        name="userEmail"
+        value={form.userEmail}
+        onChange={handleChange}
+        required
+      />
     </div>
-    <div className="button-half">
-      <a href="/auth/signup" className="button-like">Sign Up</a>
+    <div className="form-group">
+      <label htmlFor="userPw">Password</label>
+      <input
+        type="password"
+        id="userPw"
+        name="userPw"
+        value={form.userPw}
+        onChange={handleChange}
+        required
+      />
     </div>
-  </div>
-</form>
+    <div className="button-container">
+      <div className="button-half">
+        <button type="submit" className="button-style">
+          Login
+        </button>
+      </div>
+      <div className="button-half">
+        <a href="/auth/signup" className="button-like">
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </form>
 );
