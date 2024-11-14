@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./signup.css";
 import Button from "@components/button"; // import the FormButton component
+import Input from "@components/input";
+import Select from "@components/select";
 
 export const Signup = () => {
   const [form, setForm] = useState({
     userEmail: "",
     userPw: "",
-    confirmPassword: "",
+    confirm: "",
     userName: "",
     userPhone: "",
     userCountry: "",
@@ -26,13 +28,13 @@ export const Signup = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (form.userPw !== form.confirmPassword) {
+    if (form.userPw !== form.confirm) {
       alert("Passwords do not match!");
       return;
     }
 
     try {
-      const { confirmPassword, ...signupDataToSend } = form;
+      const { confirm, ...signupDataToSend } = form;
       const backendUrl = import.meta.env.VITE_BACKEND_URL;
       const backendPort = import.meta.env.VITE_BACKEND_PORT;
 
@@ -81,7 +83,7 @@ const SignupForm = ({
   form: {
     userEmail: string;
     userPw: string;
-    confirmPassword: string;
+    confirm: string;
     userName: string;
     userPhone: string;
     userCountry: string;
@@ -94,89 +96,36 @@ const SignupForm = ({
 }) => (
   <form className="signup-form" onSubmit={handleSubmit}>
     <h2>Sign Up</h2>
-    <div className="form-group">
-      <label htmlFor="userName">Username</label>
-      <input
-        type="text"
-        id="userName"
-        name="userName"
-        value={form.userName}
-        onChange={handleChange}
-        required
-      />
-    </div>
-    <div className="form-group">
-      <label htmlFor="userEmail">Email</label>
-      <input
-        type="email"
-        id="userEmail"
-        name="userEmail"
-        value={form.userEmail}
-        onChange={handleChange}
-        required
-      />
-    </div>
-    <div className="form-group">
-      <label htmlFor="userPw">Password</label>
-      <input
-        type="password"
-        id="userPw"
-        name="userPw"
-        value={form.userPw}
-        onChange={handleChange}
-        required
-      />
-    </div>
-    <div className="form-group">
-      <label htmlFor="confirmPassword">Confirm Password</label>
-      <input
-        type="password"
-        id="confirmPassword"
-        name="confirmPassword"
-        value={form.confirmPassword}
-        onChange={handleChange}
-        required
-      />
-    </div>
-    <div className="form-group">
-      <label htmlFor="userPhone">Phone</label>
-      <input
-        type="text"
-        id="userPhone"
-        name="userPhone"
-        value={form.userPhone}
-        onChange={handleChange}
-        required
-      />
-    </div>
-    <div className="form-group">
-      <label htmlFor="userCountry">Country</label>
-      <select
-        id="userCountry"
-        name="userCountry"
-        value={form.userCountry}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Select your country</option>
-        <option value="USA">United States</option>
-      </select>
-    </div>
-    <div className="form-group">
-      <label htmlFor="userSubnational">Subnational</label>
-      <select
-        id="userSubnational"
-        name="userSubnational"
-        value={form.userSubnational}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Select your state/province</option>
-        <option value="CA">California</option>
-        <option value="TX">Texas</option>
-        <option value="ON">New York</option>
-      </select>
-    </div>
+    <Input form={form} key="userName" type="text" on={handleChange}>
+      Username
+    </Input>
+    <Input form={form} key="userEmail" type="email" on={handleChange}>
+      Email
+    </Input>
+    <Input form={form} key="userPw" type="password" on={handleChange}>
+      Password
+    </Input>
+    <Input form={form} key="confirm" type="password" on={handleChange}>
+      Confirm Password
+    </Input>
+    <Input form={form} key="userPhone" type="text" on={handleChange}>
+      Phone
+    </Input>
+    <Select form={form} key="userCountry" name="Country" on={handleChange}>
+      <option value="">Select your country</option>
+      <option value="USA">United States</option>
+    </Select>
+    <Select
+      form={form}
+      key="userSubnational"
+      name="Subnational"
+      on={handleChange}
+    >
+      <option value="">Select your state/province</option>
+      <option value="CA">California</option>
+      <option value="TX">Texas</option>
+      <option value="ON">New York</option>
+    </Select>
     <Button type="submit">Sign Up</Button>
   </form>
 );
