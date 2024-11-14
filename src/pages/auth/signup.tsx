@@ -128,6 +128,8 @@ const SignupForm = ({
       <option value="TX">Texas</option>
       <option value="ON">New York</option>
     </Select>
-    <Button filled>Sign Up</Button>
+    <Button type="submit" filled>
+      Sign Up
+    </Button>
   </form>
 );

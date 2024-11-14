@@ -86,7 +86,9 @@ const LoginForm = ({
       <Input form={form} key="userPw" type="password" on={handleChange}>
         Password
       </Input>
-      <Button filled>Login</Button>
+      <Button type="submit" filled>
+        Login
+      </Button>
     </form>
     <Button filled>Sign Up</Button>
   </>
