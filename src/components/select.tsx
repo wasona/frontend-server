@@ -14,16 +14,16 @@ const Select: React.FC<Props> = ({
   children,
   form,
   key,
-  name: title,
+  name,
   on,
   optional,
 }) => {
   return (
     <div className="input">
-      <label htmlFor="{key}}">{title}</label>
+      <label htmlFor={key}>{name}</label>
       <select
-        id="{key}}"
-        name="{key}}"
+        id={key}
+        name={key}
         value={form[key]}
         onChange={on}
         required={!optional}

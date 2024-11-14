@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./signup.css";
 import Button from "@components/button"; // import the FormButton component
 import Input from "@components/input";
 import Select from "@components/select";
+import CenteredForm from "@components/centered-form";
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -65,11 +65,13 @@ export const Signup = () => {
   };
 
   return (
-    <SignupForm
-      form={form}
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-    />
+    <CenteredForm>
+      <SignupForm
+        form={form}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+    </CenteredForm>
   );
 };
 
@@ -94,7 +96,7 @@ const SignupForm = ({
   ) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) => (
-  <form className="signup-form" onSubmit={handleSubmit}>
+  <form onSubmit={handleSubmit}>
     <h2>Sign Up</h2>
     <Input form={form} key="userName" type="text" on={handleChange}>
       Username
@@ -126,6 +128,6 @@ const SignupForm = ({
       <option value="TX">Texas</option>
       <option value="ON">New York</option>
     </Select>
-    <Button type="submit">Sign Up</Button>
+    <Button filled>Sign Up</Button>
   </form>
 );

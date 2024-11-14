@@ -6,7 +6,7 @@ interface Props {
   form: Record<string, string>;
   key: string;
   type: "text" | "email" | "password";
-  on: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+  on: (e: React.ChangeEvent<HTMLInputElement>) => void;
   optional?: boolean;
 }
 

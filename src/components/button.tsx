@@ -15,8 +15,7 @@ const Button: React.FC<FormButtonProps> = ({
   filled = false,
   className = "",
 }) => {
-  const buttonClass =
-    `form-button ${filled ? "filled" : "outlined"} ${className}`.trim();
+  const buttonClass = `${filled ? "filled" : "outlined"} ${className}`.trim();
   return (
     <button type={type} className={buttonClass}>
       {children}
