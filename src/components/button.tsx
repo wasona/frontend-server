@@ -1,19 +1,22 @@
 import React from "react";
-import "./formbutton.css"; // This should contain styles applicable to both forms
+import "./button.css"; // This should contain styles applicable to both forms
 
 interface FormButtonProps {
   // Describes the properties that the FormButton component accepts
   children: React.ReactNode;
   type?: "button" | "submit" | "reset"; // The type attribute for the button element, defaults to 'button'
+  filled?: boolean;
   className?: string; // Additional CSS classes to apply to the button
 }
 
-const FormButton: React.FC<FormButtonProps> = ({
+const Button: React.FC<FormButtonProps> = ({
   children,
   type = "button",
+  filled = false,
   className = "",
 }) => {
-  const buttonClass = `form-button ${className}`.trim();
+  const buttonClass =
+    `form-button ${filled ? "filled" : "outlined"} ${className}`.trim();
   return (
     <button type={type} className={buttonClass}>
       {children}
@@ -21,4 +24,4 @@ const FormButton: React.FC<FormButtonProps> = ({
   );
 };
 
-export default FormButton;
+export default Button;

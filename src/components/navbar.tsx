@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css"; // Import the CSS file
-import FormButton from "@components/formbutton";
+import Button from "@components/button";
 import DarkModeSvg from "@assets/dark_mode.svg";
 import { useAuthStore } from "@store/authStore";
 
@@ -14,14 +14,14 @@ const Navbar: React.FC = () => {
       </div>
       <div className="nav-section">
         {
-          <FormButton
+          <Button
             className="dark-mode-toggle"
             children={
               <>
                 <img src={DarkModeSvg} alt="Dark Mode Toggle" />
               </>
             }
-          ></FormButton>
+          ></Button>
         }
         {isLoggedIn ? (
           <button

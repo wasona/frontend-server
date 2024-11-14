@@ -1,9 +1,9 @@
 import React from "react";
 import "./home-blurb.css"; // Import the CSS file
-import FormButton from "@components/formbutton";
+import Button from "@components/button";
 import wasonaImage from "@assets/wasona.svg"; // Import the SVG file
 
-const Blurb: React.FC = () => {
+const HomeBlurb: React.FC = () => {
   return (
     <div className="blurb">
       <img src={wasonaImage} alt="Wasona bird!" />
@@ -18,12 +18,10 @@ const Blurb: React.FC = () => {
           <br />
           with fun exercises!
         </p>
-        <FormButton className="startNow">
-          <span className="startNowText">start now</span>
-        </FormButton>
+        <Button filled>start now</Button>
       </div>
     </div>
   );
 };
 
-export default Blurb;
+export default HomeBlurb;

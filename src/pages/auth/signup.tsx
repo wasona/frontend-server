@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./signup.css";
-import FormButton from "@components/formbutton"; // import the FormButton component
+import Button from "@components/button"; // import the FormButton component
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -177,6 +177,6 @@ const SignupForm = ({
         <option value="ON">New York</option>
       </select>
     </div>
-    <FormButton type="submit">Sign Up</FormButton>
+    <Button type="submit">Sign Up</Button>
   </form>
 );
