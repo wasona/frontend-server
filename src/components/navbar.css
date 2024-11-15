@@ -28,34 +28,6 @@ nav {
     color: var(--shade-color);
 }
 
-.sign-in {
-    color: var(--bg-color);
-    font-size: 18px;
-    font-weight: 600;
-    background-color: var(--shade-color);
-    box-shadow: 2px 2px 2px var(--black-shadow-color);
-    border-style: solid;
-    border-color: var(--shade-color);
-    border-radius: 100px;
-    border-width: 1px;
-    padding: 10px 20px; /* Added padding to create nice margins around the text */
-    transition:
-        background-color 0.166666s ease,
-        transform 0.166666s ease;
-}
-
-.sign-in:active {
-    transform: scale(0.9) scale(1);
-    transition: transform 0.166666s ease;
-}
-
-.sign-in:hover {
-    background-color: var(--accent-color);
-}
-
-.sign-in-text {
-}
-
 .dark-mode-toggle {
     color: var(--bg-color);
     background-color: transparent;

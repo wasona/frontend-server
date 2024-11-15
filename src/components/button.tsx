@@ -7,6 +7,7 @@ interface FormButtonProps {
   type?: "button" | "submit" | "reset"; // The type attribute for the button element, defaults to 'button'
   filled?: boolean;
   className?: string; // Additional CSS classes to apply to the button
+  on?: () => void;
 }
 
 const Button: React.FC<FormButtonProps> = ({
@@ -14,10 +15,11 @@ const Button: React.FC<FormButtonProps> = ({
   type = "button",
   filled = false,
   className = "",
+  on,
 }) => {
   const buttonClass = `${filled ? "filled" : "outlined"} ${className}`.trim();
   return (
-    <button type={type} className={buttonClass}>
+    <button onClick={on} type={type} className={buttonClass}>
       {children}
     </button>
   );

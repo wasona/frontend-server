@@ -4,6 +4,8 @@ import Button from "@components/button";
 import DarkModeSvg from "@assets/dark_mode.svg";
 import { useAuthStore } from "@store/authStore";
 
+const goto = (path: string) => () => (window.location.href = path);
+
 const Navbar: React.FC = () => {
   const { isLoggedIn } = useAuthStore();
 
@@ -13,31 +15,12 @@ const Navbar: React.FC = () => {
         <span className="logo">Wasona</span>
       </div>
       <div className="nav-section">
-        {
-          <Button
-            className="dark-mode-toggle"
-            children={
-              <>
-                <img src={DarkModeSvg} alt="Dark Mode Toggle" />
-              </>
-            }
-          ></Button>
-        }
-        {isLoggedIn ? (
-          <button
-            className="profile"
-            onClick={() => (window.location.href = "/auth/profile")}
-          >
-            <span className="profile-text">Profile</span>
-          </button>
-        ) : (
-          <button
-            className="sign-in"
-            onClick={() => (window.location.href = "/auth/login")}
-          >
-            <span className="sign-in-text">Sign In</span>
-          </button>
-        )}
+        <Button className="dark-mode-toggle">
+          <img src={DarkModeSvg} alt="Dark Mode Toggle" />
+        </Button>
+        <Button filled on={goto(isLoggedIn ? "/auth/profile" : "/auth/login")}>
+          {isLoggedIn ? "Profile" : "Sign In"}
+        </Button>
       </div>
     </nav>
   );
