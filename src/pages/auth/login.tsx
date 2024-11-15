@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import CenteredForm from "@components/centered-form";
 import Input from "@components/input";
 import Button from "@components/button";
+import { wasona } from "@utils/wasona";
 
 export const Login = () => {
   const [form, setForm] = useState({
@@ -20,36 +20,7 @@ export const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    try {
-      const backendUrl = import.meta.env.VITE_BACKEND_URL;
-      const backendPort = import.meta.env.VITE_BACKEND_PORT;
-
-      if (!backendUrl || !backendPort) {
-        alert(
-          "Backend URL or port is missing. Please check your environment variables.",
-        );
-        return;
-      }
-
-      const response = await axios.post(
-        `${backendUrl}:${backendPort}/auth/login`,
-        { ...form, keepLoggedIn: true },
-      );
-
-      console.log("Login successful", response.data);
-      alert("Login successful!");
-    } catch (error: unknown) {
-      if (axios.isAxiosError(error) && error.response) {
-        alert(
-          `Server error: ${error.response.data.codeName}\n\n${JSON.stringify(error.response.data.error)}`,
-        );
-      } else if (error instanceof Error) {
-        alert("Network error: " + error.message);
-      } else {
-        alert("An unexpected error occurred: " + error);
-      }
-    }
+    await wasona("post", "/auth/login", { ...form, keepLoggedIn: true });
   };
 
   return (
