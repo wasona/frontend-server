@@ -3,8 +3,7 @@ import "./navbar.css";
 import Button from "@components/button";
 import DarkModeSvg from "@assets/dark_mode.svg";
 import { useAuthStore } from "@store/authStore";
-
-const goto = (path: string) => () => (window.location.href = path);
+import { goto } from "@utils/goto";
 
 const Navbar: React.FC = () => {
   const { isLoggedIn } = useAuthStore();
