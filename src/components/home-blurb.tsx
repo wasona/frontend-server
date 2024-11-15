@@ -1,13 +1,13 @@
 import React from "react";
-import "./home-blurb.css"; // Import the CSS file
+import "./home-blurb.css";
 import Button from "@components/button";
-import wasonaImage from "@assets/wasona.svg"; // Import the SVG file
+import wasonaImage from "@assets/wasona.svg";
 
 const HomeBlurb: React.FC = () => {
   return (
     <div className="blurb">
       <img src={wasonaImage} alt="Wasona bird!" />
-      <div className="blurbTextBox">
+      <div className="blurb-text-box">
         <h1>
           Wasona
           <br />

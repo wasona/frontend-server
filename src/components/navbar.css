@@ -1,6 +1,4 @@
-/* THIS IS HOW TO COMMENT STUFF ON CSS FILES */
-
-nav {
+.nav {
     background-color: var(--bg-color-grad);
     height: 50px;
     display: flex;

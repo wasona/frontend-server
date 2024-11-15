@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css";
 import Navbar from "@components/navbar";
 import HomeBlurb from "@components/home-blurb";
 import WidthLimiter from "@components/width-limiter";

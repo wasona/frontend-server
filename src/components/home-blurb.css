@@ -7,13 +7,13 @@
     height: 100%;
 }
 
-.blurbTextBox {
+.blurb-text-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.blurbTextBox h1 {
+.blurb-text-box h1 {
     color: var(--shade-color);
     font-size: 48px;
     font-weight: 600;
@@ -21,7 +21,7 @@
     margin: 0;
 }
 
-.blurbTextBox p {
+.blurb-text-box p {
     font-size: 20px;
     font-weight: 600;
     text-align: center;

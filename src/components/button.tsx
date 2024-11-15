@@ -1,12 +1,11 @@
 import React from "react";
-import "./button.css"; // This should contain styles applicable to both forms
+import "./button.css";
 
 interface FormButtonProps {
-  // Describes the properties that the FormButton component accepts
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset"; // The type attribute for the button element, defaults to 'button'
+  type?: "button" | "submit" | "reset";
   filled?: boolean;
-  className?: string; // Additional CSS classes to apply to the button
+  className?: string;
   on?: () => void;
 }
 

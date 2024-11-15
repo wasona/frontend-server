@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar.css"; // Import the CSS file
+import "./navbar.css";
 import Button from "@components/button";
 import DarkModeSvg from "@assets/dark_mode.svg";
 import { useAuthStore } from "@store/authStore";
@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const { isLoggedIn } = useAuthStore();
 
   return (
-    <nav>
+    <nav className="nav">
       <div className="nav-section">
         <span className="logo">Wasona</span>
       </div>
