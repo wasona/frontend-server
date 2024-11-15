@@ -80,10 +80,10 @@ const LoginForm = ({
   <>
     <form onSubmit={handleSubmit}>
       <h2>Login</h2>
-      <Input form={form} key="userEmail" type="email" on={handleChange}>
+      <Input form={form} name="userEmail" type="email" on={handleChange}>
         Email
       </Input>
-      <Input form={form} key="userPw" type="password" on={handleChange}>
+      <Input form={form} name="userPw" type="password" on={handleChange}>
         Password
       </Input>
       <Button type="submit" filled>

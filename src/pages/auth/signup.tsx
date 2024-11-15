@@ -98,29 +98,29 @@ const SignupForm = ({
 }) => (
   <form onSubmit={handleSubmit}>
     <h2>Sign Up</h2>
-    <Input form={form} key="userName" type="text" on={handleChange}>
+    <Input form={form} name="userName" type="text" on={handleChange}>
       Username
     </Input>
-    <Input form={form} key="userEmail" type="email" on={handleChange}>
+    <Input form={form} name="userEmail" type="email" on={handleChange}>
       Email
     </Input>
-    <Input form={form} key="userPw" type="password" on={handleChange}>
+    <Input form={form} name="userPw" type="password" on={handleChange}>
       Password
     </Input>
-    <Input form={form} key="confirm" type="password" on={handleChange}>
+    <Input form={form} name="confirm" type="password" on={handleChange}>
       Confirm Password
     </Input>
-    <Input form={form} key="userPhone" type="text" on={handleChange}>
+    <Input form={form} name="userPhone" type="text" on={handleChange}>
       Phone
     </Input>
-    <Select form={form} key="userCountry" name="Country" on={handleChange}>
+    <Select form={form} name="userCountry" title="Country" on={handleChange}>
       <option value="">Select your country</option>
       <option value="USA">United States</option>
     </Select>
     <Select
       form={form}
-      key="userSubnational"
-      name="Subnational"
+      name="userSubnational"
+      title="Subnational"
       on={handleChange}
     >
       <option value="">Select your state/province</option>

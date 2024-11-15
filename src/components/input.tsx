@@ -4,7 +4,7 @@ import "./input.css";
 interface Props {
   children: React.ReactNode;
   form: Record<string, string>;
-  key: string;
+  name: string;
   type: "text" | "email" | "password";
   on: (e: React.ChangeEvent<HTMLInputElement>) => void;
   optional?: boolean;
@@ -13,19 +13,19 @@ interface Props {
 const Input: React.FC<Props> = ({
   children,
   form,
-  key,
+  name,
   type,
   on,
   optional,
 }) => {
   return (
     <div className="input">
-      <label htmlFor={key}>{children}</label>
+      <label htmlFor={name}>{children}</label>
       <input
         type={type}
-        id={key}
-        name={key}
-        value={form[key]}
+        id={name}
+        name={name}
+        value={form[name]}
         onChange={on}
         required={!optional}
       />

@@ -4,8 +4,8 @@ import "./select.css";
 interface Props {
   children: React.ReactNode;
   form: Record<string, string>;
-  key: string;
   name: string;
+  title: string;
   on: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
   optional?: boolean;
 }
@@ -13,18 +13,18 @@ interface Props {
 const Select: React.FC<Props> = ({
   children,
   form,
-  key,
   name,
+  title,
   on,
   optional,
 }) => {
   return (
     <div className="input">
-      <label htmlFor={key}>{name}</label>
+      <label htmlFor={name}>{title}</label>
       <select
-        id={key}
-        name={key}
-        value={form[key]}
+        id={name}
+        name={name}
+        value={form[name]}
         onChange={on}
         required={!optional}
       >
