@@ -11,7 +11,7 @@ const verbs = {
 export async function wasona(
   verb: "post" | "get",
   endpoint: string,
-  data: Record<string, any>,
+  data?: Record<string, any>,
 ) {
   try {
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
