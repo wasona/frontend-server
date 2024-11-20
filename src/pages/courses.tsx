@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "@components/navbar";
 import WidthLimiter from "@components/width-limiter";
 import { wasona } from "@utils/wasona";
-import { CoursesRequest, CoursesRequestT, CoursesT } from "../models/courses";
+import { CoursesRequest, CoursesRequestT, CoursesT } from "@models/courses";
 
 const Courses: React.FC = () => {
   const [data, setData] = useState<CoursesRequestT>();
