@@ -1,15 +1,15 @@
 import Navbar from "@components/navbar";
 import WidthLimiter from "@components/width-limiter";
-import { CoursesRequestT } from "@models/courses";
+import { CoursesResponseT } from "@models/api/courses";
 import { wasona } from "@utils/wasona";
 import React, { useEffect, useState } from "react";
 
 export const Courses: React.FC = () => {
-  const [data, setData] = useState<CoursesRequestT>();
+  const [data, setData] = useState<CoursesResponseT>();
 
   useEffect(() => {
     (async () => {
-      const response = await wasona<CoursesRequestT>("get", "/app/courses");
+      const response = await wasona<CoursesResponseT>("get", "/app/courses");
       if (response) setData(response);
     })();
   }, []);

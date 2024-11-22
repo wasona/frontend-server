@@ -1,10 +1,8 @@
 import Navbar from "@components/navbar";
 import WidthLimiter from "@components/width-limiter";
-import {
-  AnswerRequestT,
-  QuestionRequestT,
-  TasksRequestT,
-} from "@models/courses";
+import { AnswerResponseT } from "@models/api/answer";
+import { QuestionResponseT } from "@models/api/question";
+import { TasksResponseT } from "@models/api/tasks";
 import { wasona } from "@utils/wasona";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -12,14 +10,14 @@ import { useNavigate, useParams } from "react-router-dom";
 export const Tasks: React.FC = () => {
   const [done, setDone] = useState(false);
   const [taskQueue, setTaskQueue] = useState<string[]>();
-  const [question, setQuestion] = useState<QuestionRequestT>();
+  const [question, setQuestion] = useState<QuestionResponseT>();
   const { id: lessonId } = useParams();
   const navigate = useNavigate();
 
   // When lessonId is updated, load task queue
   useEffect(() => {
     (async () => {
-      const response = await wasona<TasksRequestT>("get", "/app/tasks", {
+      const response = await wasona<TasksResponseT>("get", "/app/tasks", {
         params: { lessonId: lessonId },
       });
       if (response) setTaskQueue(response.data!.tasks);
@@ -34,7 +32,7 @@ export const Tasks: React.FC = () => {
       return;
     }
     (async () => {
-      const response = await wasona<QuestionRequestT>(
+      const response = await wasona<QuestionResponseT>(
         "get",
         "/app/task-question",
         {
@@ -51,9 +49,13 @@ export const Tasks: React.FC = () => {
 
   const handleSubmit = (text: string) => {
     (async () => {
-      const response = await wasona<AnswerRequestT>("get", "/app/task-answer", {
-        params: { taskId: taskQueue![0], reply: text },
-      });
+      const response = await wasona<AnswerResponseT>(
+        "get",
+        "/app/task-answer",
+        {
+          params: { taskId: taskQueue![0], reply: text },
+        },
+      );
       if (response && response.success) {
         alert(response.data!.correct);
         setTaskQueue(taskQueue!.slice(1));

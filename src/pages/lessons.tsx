@@ -1,17 +1,17 @@
 import Navbar from "@components/navbar";
 import WidthLimiter from "@components/width-limiter";
-import { LessonsRequestT } from "@models/courses";
+import { LessonsResponseT } from "@models/api/lessons";
 import { wasona } from "@utils/wasona";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export const Lessons: React.FC = () => {
-  const [data, setData] = useState<LessonsRequestT>();
+  const [data, setData] = useState<LessonsResponseT>();
   const { id: courseId } = useParams();
 
   useEffect(() => {
     (async () => {
-      const response = await wasona<LessonsRequestT>("get", "/app/lessons", {
+      const response = await wasona<LessonsResponseT>("get", "/app/lessons", {
         params: { courseId: courseId },
       });
       if (response) setData(response);
