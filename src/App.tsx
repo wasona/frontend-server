@@ -3,6 +3,7 @@ import Signup from "@pages/auth/signup";
 import Login from "@pages/auth/login";
 import Home from "@pages/home";
 import Courses from "@pages/courses";
+import Lessons from "@pages/lessons";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/auth/signup" element={<Signup />} />
       <Route path="/auth/login" element={<Login />} />
       <Route path="/courses" element={<Courses />} />
+      <Route path="/lessons/:courseId" element={<Lessons />} />
     </Routes>
   );
 }
