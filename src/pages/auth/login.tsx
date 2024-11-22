@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import Button from "@components/button";
 import CenteredForm from "@components/centered-form";
 import Input from "@components/input";
-import Button from "@components/button";
 import { wasona } from "@utils/wasona";
+import React, { useState } from "react";
 
 export const Login = () => {
   const [form, setForm] = useState({
@@ -33,8 +33,6 @@ export const Login = () => {
     </CenteredForm>
   );
 };
-
-export default Login;
 
 const LoginForm = ({
   form,

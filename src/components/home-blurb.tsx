@@ -1,8 +1,8 @@
+import wasonaImage from "@assets/wasona.svg";
+import Button from "@components/button";
+import { goto } from "@utils/goto";
 import React from "react";
 import "./home-blurb.css";
-import Button from "@components/button";
-import wasonaImage from "@assets/wasona.svg";
-import { goto } from "@utils/goto";
 
 const HomeBlurb: React.FC = () => {
   return (
