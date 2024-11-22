@@ -43,3 +43,28 @@ export const LessonsRequest = createRequestSchema(
 );
 
 export type LessonsRequestT = z.infer<typeof LessonsRequest>;
+
+export const TasksRequest = createRequestSchema(
+  z.object({ tasks: z.array(z.string().uuid()) }).optional(),
+);
+
+export type TasksRequestT = z.infer<typeof TasksRequest>;
+
+export const QuestionRequest = createRequestSchema(
+  z
+    .object({
+      task: z.object({
+        type: z.number().int().min(0),
+        give: z.string(),
+      }),
+    })
+    .optional(),
+);
+
+export type QuestionRequestT = z.infer<typeof QuestionRequest>;
+
+export const AnswerRequest = createRequestSchema(
+  z.object({ correct: z.boolean() }).optional(),
+);
+
+export type AnswerRequestT = z.infer<typeof AnswerRequest>;

@@ -28,7 +28,7 @@ export async function wasona<T>(
     );
 
     console.log(`${endpoint} successful`, response.data);
-    alert(`${endpoint} successful!`);
+    // alert(`${endpoint} successful!`);
     return response.data;
   } catch (error: unknown) {
     if (axios.isAxiosError(error) && error.response) {

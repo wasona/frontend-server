@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 export const Lessons: React.FC = () => {
   const [data, setData] = useState<LessonsRequestT>();
-  const { courseId } = useParams();
+  const { id: courseId } = useParams();
 
   useEffect(() => {
     (async () => {
