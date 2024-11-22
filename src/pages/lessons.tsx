@@ -18,25 +18,21 @@ export const Lessons: React.FC = () => {
     })();
   }, [courseId]);
 
+  const Error = <p>{JSON.stringify(data?.error)}</p>;
+
   return (
     <>
       <Navbar />
       <WidthLimiter>
-        {/* {JSON.stringify(data, null, 2)} */}
-        {/* {JSON.stringify(data?.data?.courses, null, 2)} */}
-        {data?.success ? (
-          data?.data?.lessons.map((lesson, i) => {
-            return (
+        {data?.success
+          ? data?.data!.map((lesson, i) => (
               <div key={i}>
                 <a href={`/tasks/${lesson.lesson_id}`}>
                   Practice {lesson.lesson_title}
                 </a>
               </div>
-            );
-          })
-        ) : (
-          <p>{JSON.stringify(data?.error)}</p>
-        )}
+            ))
+          : Error}
       </WidthLimiter>
     </>
   );
