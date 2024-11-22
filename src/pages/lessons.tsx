@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
 import Navbar from "@components/navbar";
 import WidthLimiter from "@components/width-limiter";
-import { wasona } from "@utils/wasona";
 import { LessonsRequestT } from "@models/courses";
+import { wasona } from "@utils/wasona";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const Lessons: React.FC = () => {
+export const Lessons: React.FC = () => {
   const [data, setData] = useState<LessonsRequestT>();
   const { courseId } = useParams();
 
@@ -41,5 +41,3 @@ const Lessons: React.FC = () => {
     </>
   );
 };
-
-export default Lessons;

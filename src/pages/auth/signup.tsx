@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Button from "@components/button"; // import the FormButton component
+import Button from "@components/button";
+import CenteredForm from "@components/centered-form";
 import Input from "@components/input";
 import Select from "@components/select";
-import CenteredForm from "@components/centered-form";
 import { wasona } from "@utils/wasona";
+import React, { useState } from "react";
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -47,8 +47,6 @@ export const Signup = () => {
     </CenteredForm>
   );
 };
-
-export default Signup;
 
 const SignupForm = ({
   form,

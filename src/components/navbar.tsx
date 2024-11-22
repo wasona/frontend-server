@@ -1,9 +1,9 @@
-import React from "react";
-import "./navbar.css";
-import Button from "@components/button";
 import DarkModeSvg from "@assets/dark_mode.svg";
+import Button from "@components/button";
 import { useAuthStore } from "@store/authStore";
 import { goto } from "@utils/goto";
+import React from "react";
+import "./navbar.css";
 
 const Navbar: React.FC = () => {
   const { isLoggedIn } = useAuthStore();

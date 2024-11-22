@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
 import Navbar from "@components/navbar";
 import WidthLimiter from "@components/width-limiter";
-import { wasona } from "@utils/wasona";
 import { CoursesRequestT } from "@models/courses";
+import { wasona } from "@utils/wasona";
+import React, { useEffect, useState } from "react";
 
-const Courses: React.FC = () => {
+export const Courses: React.FC = () => {
   const [data, setData] = useState<CoursesRequestT>();
 
   useEffect(() => {
@@ -37,5 +37,3 @@ const Courses: React.FC = () => {
     </>
   );
 };
-
-export default Courses;
