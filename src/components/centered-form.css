@@ -1,0 +1,12 @@
+.centered-form {
+    width: 300px;
+    margin: 50vh auto 0 auto;
+    transform: translateY(-50%);
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.centered-form h2 {
+    text-align: center;
+}
