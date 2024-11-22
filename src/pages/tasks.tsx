@@ -20,7 +20,7 @@ export const Tasks: React.FC = () => {
       const response = await wasona<TasksResponseT>("get", "/app/tasks", {
         params: { lessonId: lessonId },
       });
-      if (response) setTaskQueue(response.data!.tasks);
+      if (response) setTaskQueue(response.data!);
     })();
   }, [lessonId]);
 
@@ -57,7 +57,7 @@ export const Tasks: React.FC = () => {
         },
       );
       if (response && response.success) {
-        alert(response.data!.correct);
+        alert(response.data!);
         setTaskQueue(taskQueue!.slice(1));
         console.log(taskQueue);
       }
@@ -73,7 +73,7 @@ export const Tasks: React.FC = () => {
   );
   const Question = (
     <>
-      <p>{question?.data?.task.give}</p>
+      <p>{question?.data?.give}</p>
       <input onKeyDown={handleKeyDown}></input>
     </>
   );
