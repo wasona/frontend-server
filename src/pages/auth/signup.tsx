@@ -7,11 +7,10 @@ export const Signup = () => {
   const [form, setForm] = useState({
     userEmail: "",
     userPw: "",
-    confirmPassword: "",
+    confirm: "",
     userName: "",
     userPhone: "",
     userCountry: "",
-    userSubnational: "",
   });
 
   const [countries, setCountries] = useState<CountriesT[]>([]);
@@ -28,7 +27,7 @@ export const Signup = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (form.userPw !== form.confirmPassword) {
+    if (form.userPw !== form.confirm) {
       alert("Passwords do not match!");
       return;
     }
@@ -120,11 +119,10 @@ const SignupForm = ({
   form: {
     userEmail: string;
     userPw: string;
-    confirmPassword: string;
+    confirm: string;
     userName: string;
     userPhone: string;
     userCountry: string;
-    userSubnational: string;
   };
   handleChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -168,12 +166,12 @@ const SignupForm = ({
       />
     </div>
     <div className="form-group">
-      <label htmlFor="confirmPassword">Confirm Password</label>
+      <label htmlFor="confirm">Confirm Password</label>
       <input
         type="password"
-        id="confirmPassword"
-        name="confirmPassword"
-        value={form.confirmPassword}
+        id="confirm"
+        name="confirm"
+        value={form.confirm}
         onChange={handleChange}
         required
       />
@@ -209,21 +207,6 @@ const SignupForm = ({
               : country.country_name_english}
           </option>
         ))}
-      </select>
-    </div>
-    <div className="form-group">
-      <label htmlFor="userSubnational">Subnational</label>
-      <select
-        id="userSubnational"
-        name="userSubnational"
-        value={form.userSubnational}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Select your state/province</option>
-        <option value="CA">California</option>
-        <option value="TX">Texas</option>
-        <option value="ON">New York</option>
       </select>
     </div>
     <button type="submit">Sign Up</button>
