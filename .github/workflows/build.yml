@@ -17,13 +17,17 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Setup Yarn
-        uses: threeal/setup-yarn-action@v2.0.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          cache: false
+          node-version: '16' # Specify the Node.js version you want to use
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build app
-        run: yarn run build
+        run: npm run build
 
       # If the app builds successfully, and is not a PR:
       # Deploy to production
