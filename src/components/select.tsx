@@ -22,6 +22,7 @@ const Select: React.FC<Props> = ({
     <div className="input">
       <label htmlFor={name}>{title}</label>
       <select
+        className="select"
         id={name}
         name={name}
         value={form[name]}
