@@ -2,11 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./signup.css";
 import { CountriesT } from "../../models/signup_models";
-import Button from "@components/button";
-import CenteredForm from "@components/centered-form";
-import Input from "@components/input";
-import Select from "@components/select";
-import { wasona } from "@utils/wasona";
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -39,7 +34,7 @@ export const Signup = () => {
     }
 
     try {
-      const { confirmPassword, ...signupDataToSend } = form;
+      const { ...signupDataToSend } = form;
       const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
       if (!backendUrl) {
