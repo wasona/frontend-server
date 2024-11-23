@@ -8,11 +8,11 @@ const verbs = {
   get: axios.get,
 };
 
-export async function wasona(
+export async function wasona<T>(
   verb: "post" | "get",
   endpoint: string,
-  data: Record<string, any>,
-) {
+  data?: object,
+): Promise<T | undefined> {
   try {
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const backendPort = import.meta.env.VITE_BACKEND_PORT;
@@ -28,7 +28,7 @@ export async function wasona(
     );
 
     console.log(`${endpoint} successful`, response.data);
-    alert(`${endpoint} successful!`);
+    // alert(`${endpoint} successful!`);
     return response.data;
   } catch (error: unknown) {
     if (axios.isAxiosError(error) && error.response) {

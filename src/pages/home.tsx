@@ -1,10 +1,10 @@
-import React from "react";
-import Navbar from "@components/navbar";
-import HomeBlurb from "@components/home-blurb";
-import WidthLimiter from "@components/width-limiter";
 import FullscreenLayout from "@components/fullscreen-layout";
+import HomeBlurb from "@components/home-blurb";
+import Navbar from "@components/navbar";
+import WidthLimiter from "@components/width-limiter";
+import React from "react";
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <FullscreenLayout>
       <Navbar />
@@ -18,5 +18,3 @@ const Home: React.FC = () => {
     </FullscreenLayout>
   );
 };
-
-export default Home;

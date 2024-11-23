@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./signup.css";
 import { CountriesT } from "../../models/signup_models";
+import Button from "@components/button";
+import CenteredForm from "@components/centered-form";
+import Input from "@components/input";
+import Select from "@components/select";
+import { wasona } from "@utils/wasona";
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -110,8 +115,6 @@ export const Signup = () => {
     />
   );
 };
-
-export default Signup;
 
 const SignupForm = ({
   form,
