@@ -45,4 +45,4 @@ jobs:
             git pull &&
             npm install &&
             npm run build &&
-            npm run up
+            nohup npm run preview >> ./logs/$(date +"%Y%m%d_%H%M%S").log 2>&1 &
