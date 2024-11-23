@@ -77,7 +77,7 @@ export const Signup = () => {
         const data = response.data;
 
         if (data.success) {
-          const sortedCountries = data.data.countriesList.sort(
+          const sortedCountries = data.data.sort(
             (a: CountriesT, b: CountriesT) =>
               (a.country_name_english ?? "").localeCompare(
                 b.country_name_english ?? "",
