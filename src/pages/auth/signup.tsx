@@ -1,7 +1,6 @@
 import Button from "@components/button";
 import CenteredForm from "@components/centered-form";
 import Input from "@components/input";
-import Navbar from "@components/navbar";
 import Select from "@components/select";
 import { CountriesResponseT } from "@models/api/countries";
 import { CountriesT } from "@models/countries";
@@ -62,7 +61,7 @@ export const Signup = () => {
   }, []);
 
   return (
-    <><Navbar /><CenteredForm>
+    <><CenteredForm>
           <SignupForm
               form={form}
               handleChange={handleChange}
