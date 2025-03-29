@@ -1,6 +1,7 @@
 import Button from "@components/button";
 import CenteredForm from "@components/centered-form";
 import Input from "@components/input";
+import Navbar from "@components/navbar";
 import { wasona } from "@utils/wasona";
 import React, { useState } from "react";
 
@@ -47,6 +48,7 @@ const LoginForm = ({
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) => (
   <>
+    <Navbar />
     <form onSubmit={handleSubmit}>
       <h2>Login</h2>
       <Input form={form} name="userEmail" type="email" on={handleChange}>
